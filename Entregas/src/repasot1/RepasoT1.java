@@ -1,5 +1,6 @@
 package repasot1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import repasot1.Pelicula;
 
@@ -62,6 +63,29 @@ public class RepasoT1 {
                 break;
             
             case 5:
+            	System.out.println("Vamos a generar un vector aleatorio con números del 1 al 100: ");
+            	int aleatorio[];
+            	aleatorio = new int[5];
+            	for(int i=0; i<aleatorio.length; i++) { //Recorremos el vector
+            		aleatorio[i]=(int)(Math.random()*100+1); //Generamos un número aleatorio entre el 1 y el 100 en la posición 'i' del vector
+            		System.out.print(aleatorio[i]+" ");
+            	}
+            	System.out.println("\nImprimimos el vector al revés: ");
+            	for(int i=aleatorio.length-1; i>=0; i--) { //Recorremos el vector de forma inversa
+            		System.out.print(aleatorio[i]+" ");
+            	}
+            	int aleatorioCopia[];
+            	aleatorioCopia = new int[aleatorio.length];
+            	System.out.println("\nCreamos una copia del vector generado aleatoriamente:");
+            	for(int i=0; i<aleatorio.length; i++) {
+            		aleatorioCopia[i] = aleatorio[i]; //Copiamos el valor actual en el vector copia
+            		System.out.println(aleatorio[i]+" Original");
+            		System.out.println(aleatorio[i]+" Copia");
+            	}
+            	System.out.println("Ordenamos el vector de forma ascendente y lo imprimimos:");
+            	Arrays.sort(aleatorio); //Ordenamos el vector de forma ascendente
+            	System.out.print(Arrays.toString(aleatorio));//Imprimimos el vector por pantalla ('toString' convierte el vector en una cadena de caracteres)
+            	break;
             	
             case 0:
             	System.out.println("[Programa finalizado]");
