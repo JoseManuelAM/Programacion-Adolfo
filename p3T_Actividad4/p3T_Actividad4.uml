@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_5BEOUN4BEe2YWJKviSYkTQ" name="p3T_Actividad4">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_5CX14N4BEe2YWJKviSYkTQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7_d5IN4BEe2YWJKviSYkTQ" name="Animal">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_O2NDsN4EEe2YWJKviSYkTQ" name="nombre" visibility="public"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8FmkEN4GEe2YWJKviSYkTQ" name="edad" visibility="public"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_bNZp4OB1Ee2rC-pp8eDXUQ" name="especie" visibility="public"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fyC5wOB1Ee2rC-pp8eDXUQ" name="habitat"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_a4Y4oN4DEe2YWJKviSYkTQ" name="Hervíboro">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_7XhoAN4EEe2YWJKviSYkTQ" name="tipoHierba" visibility="public"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_G_g0QN4EEe2YWJKviSYkTQ" name="BuscarHierba()"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_XsYIQN4GEe2YWJKviSYkTQ" name="IdentificarToxicidad()"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dNGGMN4DEe2YWJKviSYkTQ" name="Carnívoro">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__l6UAN4EEe2YWJKviSYkTQ" name="tipoCarne"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_Jf9XwN4EEe2YWJKviSYkTQ" name="CazarAnimal()"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_eHIlMN4GEe2YWJKviSYkTQ" name="VerificarMuerte()"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_gqyVEN4DEe2YWJKviSYkTQ" name="Vaca">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZQmUEOB3Ee2rC-pp8eDXUQ" name="cantidadLeche"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_XSDZMN4FEe2YWJKviSYkTQ" name="SacarLeche()"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_piCpoN4DEe2YWJKviSYkTQ" name="Jirafa">
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_aOLzIN4FEe2YWJKviSYkTQ" name="EstirarCuello()"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_x-yMcN4DEe2YWJKviSYkTQ" name="León">
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_c3jCEN4FEe2YWJKviSYkTQ" name="Zarpazo()"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_16el8N4DEe2YWJKviSYkTQ" name="Buitre">
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_epN0AN4FEe2YWJKviSYkTQ" name="BuscarCadaver()"/>
+  </packagedElement>
+</uml:Model>
