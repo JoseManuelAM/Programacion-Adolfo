@@ -9,9 +9,14 @@ public class Carnivoro extends Animal { //hereda de Animal
 			this.presaFavorita=presaFavorita;
 		}
 		
+		//métodos
+		public void cazarAnimal() {
+			System.out.println("Cazando "+presaFavorita+"...");
+			System.out.println(presaFavorita+" murió a manos de "+nombre);
+		}
+		
 		//getters
 		public String getPresafavorita() {
 			return presaFavorita;
 		}
-		//los getters de los otros atributos (los de animal) también los hereda, por lo que ya estarían declarados
 }
