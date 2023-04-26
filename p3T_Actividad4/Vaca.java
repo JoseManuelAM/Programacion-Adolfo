@@ -11,19 +11,18 @@ public class Vaca extends Herviboro { //hereda de Herviboro
 	
 	//métodos
 	public void sacarLeche(int n) {
-		cantidadLeche=cantidadLeche-1;
-		if(cantidadLeche>=n) {
+		if(cantidadLeche>=n) { //controlar que la vaca tiene suficientes litros para sacar.
 			cantidadLeche=cantidadLeche-n;
-			System.out.println("Se han ordeñado "+n+" litros de leche.");
+			System.out.println("Se han ordeñado "+n+" litros de leche. Quedan "+cantidadLeche);
 			
-		}else {
+		}else { //si no tiene tantos como se han pasado por parámetro, mostrar el siguiente mensaje.
 			System.out.println("La vaca no tiene suficiente leche.");
 		}
 	}
 	
 	@Override
-	public void hacerRuido() { //modifico el método hacer ruido para que la vaca tenga su propio ruido. Voy a hacer lo mismo para Jirafa, Leon y Aguila, para que tengan su propio sonido personalizado.
-		System.out.println("Muuuuuu");
+	public void hacerRuido() { //con @Override, modifico el método general de Animal para ponerle a la vaca un sonido personalizado
+		System.out.println("Muuuu");
 	}
 	
 	//getters

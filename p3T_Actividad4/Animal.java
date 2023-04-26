@@ -3,7 +3,7 @@ package p3T_Actividad4;
 public class Animal {
 //Adolfo, yo estuve el primer día que hubo musicote
 	
-	static int numAnimales=0; //esto es una variable global que se incrementará cada vez que se cree algún animal nuevo en cualquier clase.
+	static int numAnimales=0; //VARIABLE GLOBAL que se incrementará cada vez que se cree algún animal nuevo en cualquier clase.
 	
 	protected String nombre;
 	protected int edad;
@@ -12,11 +12,11 @@ public class Animal {
 	
 	//constructor
 	public Animal(String nombre, int edad, String especie, String habitat) {
-		this.nombre=nombre; //this hace referencia a los atributos de la clase
+		this.nombre=nombre; //THIS hace referencia a los atributos de la clase
 		this.edad=edad;
-		this.habitat=habitat;
 		this.especie=especie;
-		numAnimales++; //incrementa al crear un animal
+		this.habitat=habitat;
+		numAnimales++; //incrementa al crear un nuevo animal
 	}
 	
 	//métodos
@@ -32,17 +32,20 @@ public class Animal {
 	}
 	
 	//getters
-	public String getNombre(String nombre) {
+	public String getNombre() {
 		return nombre;
 	}
-	public String getEdad(String edad) {
+	public int getEdad() {
 		return edad;
 	}
-	public String getHabitat(String habitat) {
+	public String getHabitat() {
 		return habitat;
 	}
-	public String getEspecie(String especie) {
+	public String getEspecie() {
 		return especie;
+	}
+	public int getAnimales() { //devuelve el número de animales que han sido creados
+		return numAnimales;
 	}
 	//los métodos y getters de Animal serán heredados por Herviboro, Carnivoro y sus subclases
 }

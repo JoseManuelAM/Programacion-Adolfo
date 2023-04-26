@@ -15,7 +15,7 @@ public class Aguila extends Carnivoro { //hereda de Carnivoro
 	}
 	
 	@Override
-	public void hacerRuido() {
+	public void hacerRuido() { //con @Override, modifico el método general de Animal para ponerle al águila un sonido personalizado
 		System.out.println("Kyaaaa");
 	}
 	
