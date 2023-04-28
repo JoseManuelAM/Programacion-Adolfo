@@ -147,8 +147,8 @@ public class Principal {
 		System.out.println("Cola de animales inofensivos: "+inofensivos);
 		String primero=inofensivos.peek();
 		System.out.println("El elemento superior es: "+primero); //Output: León	
-		System.out.println("El león no es inofensivo, vamos a eliminarlo y colocarlo en la pila de peligrosos:");
-		String leonEsPeligroso=inofensivos.remove(); 
+		System.out.println("El león no es inofensivo, vamos a eliminarlo y colocarlo en la pila de peligrosos.");
+		String leonEsPeligroso=inofensivos.remove();
 		System.out.println("Se ha eliminado: "+leonEsPeligroso); //elimina león porque ha sido el primer introducido y la cola es FIFO (first in first out)
 		System.out.println("Cola de animales inofensivos actualizada: "+inofensivos);
 		System.out.println();
