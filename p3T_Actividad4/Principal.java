@@ -1,10 +1,11 @@
 package p3T_Actividad4;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class Principal {
 	public static void main(String[] args) {
-		Stack<String> animalesAlimentados=new Stack(); //PILA que almacena los animales que han comido
 		System.out.println("------------------------SUPERCLASE ANIMAL----------------------------");
 		Animal miAnimal=new Animal("Jake",3,"Perro","Doméstico"); //creo un nuevo objeto de la clase Animal
 		System.out.println("- Nombre: "+miAnimal.getNombre());
@@ -63,14 +64,14 @@ public class Principal {
 		System.out.println();
 		System.out.println("MÉTODOS DE JIRAFA:");
 		miJirafa.estirarCuello();
-		miVaca.hacerRuido(); //modificado de Animal con @Override.
+		miJirafa.hacerRuido(); //modificado de Animal con @Override.
 		System.out.println();
 		System.out.println("MÉTODOS HEREDADOS DE HERVIBORO:");
-		miVaca.buscarHierba();
-		miVaca.comer();
+		miJirafa.buscarHierba();
+		miJirafa.comer();
 		System.out.println();
 		System.out.println("MÉTODOS HEREDADOS DE ANIMAL:"); //los otros métodos que estaban en Animal han sido heredados de herviboro
-		miVaca.dormir();
+		miJirafa.dormir();
 		
 		System.out.println("------------------------SUBCLASE CARNIVORO HIJA DE ANIMAL----------------------------");
 		Carnivoro miCarnivoro=new Carnivoro("Sharp",9,"Tigre","Selva","Búfalo"); //creo un nuevo objeto de la clase Carnivoro
@@ -82,14 +83,14 @@ public class Principal {
 		System.out.println();
 		System.out.println("MÉTODOS DE CARNIVORO:");
 		miCarnivoro.cazarAnimal();
-		miHerviboro.comer(); //modificado de Animal con @Override.
+		miCarnivoro.comer(); //modificado de Animal con @Override.
 		System.out.println();
 		System.out.println("MÉTODOS QUE HEREDA DE ANIMAL:");
-		miHerviboro.dormir();
-		miHerviboro.hacerRuido();
+		miCarnivoro.dormir();
+		miCarnivoro.hacerRuido();
 		
 		System.out.println("------------------------SUBCLASES HIJAS DE CARNIVORO----------------------------");
-		Leon miLeon=new Leon("Radahn",11,"Leon","Llanura","Cebra",90); //creo un nuevo objeto de la clase Leon
+		Leon miLeon=new Leon("Radahn",11,"León","Llanura","Cebra",90); //creo un nuevo objeto de la clase Leon
 		System.out.println("- Nombre: "+miLeon.getNombre());
 		System.out.println("- Edad: "+miLeon.getEdad()+" años");
 		System.out.println("- Especie: "+miLeon.getEspecie());
@@ -103,28 +104,65 @@ public class Principal {
 		System.out.println();
 		System.out.println("MÉTODOS HEREDADOS DE CARNIVORO:");
 		miLeon.cazarAnimal();
-		miVaca.comer();
+		miLeon.comer();
 		System.out.println();
-		/*System.out.println("MÉTODOS HEREDADOS DE ANIMAL:"); //los otros métodos que estaban en Animal han sido heredados de carnivoro
+		System.out.println("MÉTODOS HEREDADOS DE ANIMAL:"); //los otros métodos que estaban en Animal han sido heredados de carnivoro
 		miVaca.dormir();
 		System.out.println();
-		Aguila miAguila=new Aguila("Longus",17,"Jirafa","Bosque","Hojas de acacia",2.1); //creo un nuevo objeto de la clase Aguila
+		Aguila miAguila=new Aguila("Tornado",17,"Aguila","Montaña","Conejo",2.1); //creo un nuevo objeto de la clase Aguila
 		System.out.println("- Nombre: "+miAguila.getNombre());
 		System.out.println("- Edad: "+miAguila.getEdad()+" años");
 		System.out.println("- Especie: "+miAguila.getEspecie());
 		System.out.println("- Hábitat: "+miAguila.getHabitat());
-		System.out.println("- Hierba Favorita: "+miAguila.getHierbafavorita());
-		System.out.println("- Longitud del cuello: "+miAguila.getLongitudcuello()+" metros");
+		System.out.println("- Hierba Favorita: "+miAguila.getPresafavorita());
+		System.out.println("- Longitud de las alas: "+miAguila.getLongitudalas()+" metros");
 		System.out.println();
-		System.out.println("MÉTODOS DE JIRAFA:");
-		miJirafa.estirarCuello();
-		miVaca.hacerRuido(); //modificado de Animal con @Override.
+		System.out.println("MÉTODOS DE AGUILA:");
+		miAguila.aleteo();
+		miAguila.hacerRuido(); //modificado de Animal con @Override.
 		System.out.println();
 		System.out.println("MÉTODOS HEREDADOS DE HERVIBORO:");
-		miVaca.buscarHierba();
+		miAguila.cazarAnimal();
 		miVaca.comer();
 		System.out.println();
 		System.out.println("MÉTODOS HEREDADOS DE ANIMAL:"); //los otros métodos que estaban en Animal han sido heredados de herviboro
-		miVaca.dormir();*/
+		miVaca.dormir();
+		System.out.println();
+		System.out.println("FIN DEL PROGRAMA.");
+		System.out.println("Animales creados: "+miAnimal.getAnimales()); //Imprimo los animales totales creados, que los he almacenado en una VARIABLE GLOBAL.
+		System.out.println();
+		System.out.println();
+		
+		//Implementación de COLA y PILA
+		System.out.println("-- EXTRA: Ejemplos de cola y pila");
+		Queue<String> inofensivos=new LinkedList<>(); //COLA que almacena los animales que son inofensivos
+		
+		//Añadimos animales a la cola
+		inofensivos.add(miLeon.getEspecie());
+		inofensivos.add(miAnimal.getEspecie());
+		inofensivos.add(miVaca.getEspecie());
+		inofensivos.add(miJirafa.getEspecie());
+
+		System.out.println();
+		System.out.println("Cola de animales inofensivos: "+inofensivos);
+		String primero=inofensivos.peek();
+		System.out.println("El elemento superior es: "+primero); //Output: León	
+		System.out.println("El león no es inofensivo, vamos a eliminarlo y colocarlo en la pila de peligrosos:");
+		String leonEsPeligroso=inofensivos.remove(); 
+		System.out.println("Se ha eliminado: "+leonEsPeligroso); //elimina león porque ha sido el primer introducido y la cola es FIFO (first in first out)
+		System.out.println("Cola de animales inofensivos actualizada: "+inofensivos);
+		System.out.println();
+		
+		Stack<String> peligrosos=new Stack(); //PILA que almacena los animales que son peligrosos
+		peligrosos.push(miHerviboro.getEspecie());
+		peligrosos.push(miCarnivoro.getEspecie());
+		peligrosos.push(miAguila.getEspecie());
+		peligrosos.push(leonEsPeligroso); //Devuelvo el león a la pila de animales peligrosos
+		System.out.println("Pila de animales peligrosos: "+peligrosos);
+		String first=peligrosos.peek();
+		System.out.println("El animal superior es: "+first); //Output: León
+		String eliminado=peligrosos.pop();
+		System.out.println("Se ha eliminado: "+eliminado); //elimina león porque ha sido el último introducido y la pila es LIFO (last in first out)
+		System.out.println("Cola de animales peligrosos actualizada: "+peligrosos);
 	}
 }

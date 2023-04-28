@@ -16,7 +16,7 @@ public class Animal {
 		this.edad=edad;
 		this.especie=especie;
 		this.habitat=habitat;
-		numAnimales++; //incrementa al crear un nuevo animal
+		numAnimales++; //incrementa en 1 al crear un nuevo animal
 	}
 	
 	//métodos

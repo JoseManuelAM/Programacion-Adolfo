@@ -20,7 +20,7 @@ public class Aguila extends Carnivoro { //hereda de Carnivoro
 	}
 	
 	//getters
-	public double longitudAlas() {
+	public double getLongitudalas() {
 		return longitudAlas;
 	}
 }
