@@ -3,6 +3,8 @@ package actRes10_8;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 /*
@@ -16,7 +18,7 @@ public class Act10_8 {
 		
 		//Abrimos los ficheros para lectura y escritura en la misma sentencia del bloque try-catch-resources
 		try(BufferedReader in=new BufferedReader(new FileReader(fichOriginal));
-		BufferedWriter out=new BufferedReader(new FileWriter(fichCopia)) {
+		BufferedWriter out=new BufferedWriter(new FileWriter(fichCopia))) {
 			int c=in.read(); //leemos del original
 			while(c!=-1) { //mientras no lleguemos al final del fichero
 				out.write(c); //escribimos en el fichero copia
