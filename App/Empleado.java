@@ -1,15 +1,14 @@
 package App;
 
-import java.util.Date;
-
 public class Empleado extends Persona {
 	//atributos
-	private int antiguedad;
+	private int antiguedad; //años que lleva trabajando en la tienda
 	
 	//constructor
-	public Empleado(String nombre, Date fechaNac, int antiguedad) {
+	public Empleado(String nombre, String fechaNac, int antiguedad) {
 		super(nombre, fechaNac);
 		this.antiguedad=antiguedad;
+		this.setDescuento(5);
 	}
 	
 	//getters

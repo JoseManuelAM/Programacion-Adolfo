@@ -1,10 +1,9 @@
 package App;
 
-import java.util.Date;
-
-public class UsuarioVIP {
+public class UsuarioVIP extends Persona {
 	//constructor
-	public UsuarioVIP(String nombre, Date fechaNac) {
-	super();
+	public UsuarioVIP(String nombre, String fechaNac) {
+	super(nombre, fechaNac);
+	this.setDescuento(2);
 	}
 }

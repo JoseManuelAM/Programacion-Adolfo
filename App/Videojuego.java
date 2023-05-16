@@ -10,9 +10,6 @@ public class Videojuego extends Producto {
 		this.plataforma=plataforma;
 	}
 	
-	//métodos
-
-	
 	//getters
 	public String getPlataforma() {
 		return plataforma;

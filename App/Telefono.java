@@ -10,9 +10,6 @@ public class Telefono extends Producto{
 		this.tipo=tipo;
 	}
 	
-	//métodos
-	
-	
 	//getters
 	public String getTipo() {
 		return tipo;
